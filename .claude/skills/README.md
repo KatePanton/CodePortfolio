@@ -12,3 +12,4 @@ separate mechanism, tracked in `.agents/skills/`, not here.
 | Skill | Description | Task |
 |---|---|---|
 | [skill-creation](skill-creation/SKILL.md) | Checklist for authoring a new project skill: naming, frontmatter, folder layout, index/task registration. | [0002](../../tasks/0002_skill-creation-skill/task.md) |
+| [task-management](task-management/SKILL.md) | Sole entry point for creating/updating tasks; folds in grill-me, decides when to split a request into multiple tasks. | [0003](../../tasks/0003_bootstrap-remaining-skill-tasks/task.md) |
