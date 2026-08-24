@@ -2,7 +2,7 @@
 id: 0003
 title: Bootstrap remaining skill tasks
 type: skill
-status: todo
+status: done
 ---
 
 ## Summary
@@ -25,5 +25,8 @@ None yet.
 See screenshots/ in this folder.
 
 ## Outcome
-(fill in when done — target: tasks/README.md lists six tasks total,
-0004-0006 in todo status)
+Built .claude/skills/task-management/SKILL.md and registered it in
+.claude/skills/README.md. Used it to confirm the existing 0001/0002 board
+entries and create task entries 0004 (ai-docs skill), 0005 (patterns
+skill), 0006 (coding skill) — all in todo status. Board now lists six
+tasks total.
