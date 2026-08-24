@@ -2,7 +2,7 @@
 id: 0002
 title: Skill-creation skill
 type: skill
-status: todo
+status: done
 ---
 
 ## Summary
@@ -28,4 +28,6 @@ None yet — no pattern library exists (patterns skill is a later task).
 See screenshots/ in this folder.
 
 ## Outcome
-(fill in when done)
+Created .claude/skills/skill-creation/SKILL.md and .claude/skills/README.md
+(skill index) with skill-creation as its first entry. Built by hand, as
+noted in the Summary, since task-management (0003) doesn't exist yet.

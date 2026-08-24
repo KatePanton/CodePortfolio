@@ -1,0 +1,14 @@
+# Skill Index
+
+Project-authored skills, living at `.claude/skills/<name>/SKILL.md`. These
+are portfolio content — not just internal tooling — and will eventually back
+a dedicated page on the site. New rows are added here by `skill-creation` as
+each skill is actually built; for what's still planned but not yet built,
+see `tasks/README.md`.
+
+Imported third-party skills (grill-me, improve-codebase-architecture) are a
+separate mechanism, tracked in `.agents/skills/`, not here.
+
+| Skill | Description | Task |
+|---|---|---|
+| [skill-creation](skill-creation/SKILL.md) | Checklist for authoring a new project skill: naming, frontmatter, folder layout, index/task registration. | [0002](../../tasks/0002_skill-creation-skill/task.md) |
