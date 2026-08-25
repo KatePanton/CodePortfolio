@@ -30,6 +30,8 @@ page at `/projects/:slug` with syntax-highlighted code.
 
 ## Deployment
 
+Live at [code-portfolio-pi.vercel.app](https://code-portfolio-pi.vercel.app/).
+
 This repo includes a `vercel.json` with an SPA rewrite so client-side routes
-resolve correctly. Import the repo into Vercel and it will detect the Vite
-preset automatically (build command `npm run build`, output directory `dist`).
+resolve correctly. Vercel detects the Vite preset automatically (build
+command `npm run build`, output directory `dist`).
