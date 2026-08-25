@@ -2,7 +2,7 @@
 id: 0005
 title: Patterns skill
 type: skill
-status: todo
+status: done
 ---
 
 ## Summary
@@ -24,4 +24,7 @@ N/A — this task builds the patterns skill itself.
 See screenshots/ in this folder.
 
 ## Outcome
-(fill in when done)
+Created .claude/skills/patterns/SKILL.md plus references/reading.md and
+references/creating.md, and registered it in .claude/skills/README.md. The
+.claude/patterns/ library itself stays empty for now — no patterns exist
+yet to seed it with.

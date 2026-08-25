@@ -2,7 +2,7 @@
 id: 0004
 title: Ai-docs skill
 type: skill
-status: todo
+status: done
 ---
 
 ## Summary
@@ -21,4 +21,5 @@ None yet — no pattern library exists (patterns skill is task 0005).
 See screenshots/ in this folder.
 
 ## Outcome
-(fill in when done)
+Created .claude/skills/ai-docs/SKILL.md and registered it in
+.claude/skills/README.md.
