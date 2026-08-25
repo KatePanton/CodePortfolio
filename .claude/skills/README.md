@@ -15,3 +15,4 @@ separate mechanism, tracked in `.agents/skills/`, not here.
 | [task-management](task-management/SKILL.md) | Sole entry point for creating/updating tasks; folds in grill-me, decides when to split a request into multiple tasks. | [0003](../../tasks/0003_bootstrap-remaining-skill-tasks/task.md) |
 | [ai-docs](ai-docs/SKILL.md) | Creates and maintains the root CLAUDE.md context file; reads it before other work starts. | [0004](../../tasks/0004_ai-docs-skill/task.md) |
 | [patterns](patterns/SKILL.md) | Finds, reads, and creates reusable code patterns/templates in .claude/patterns/. | [0005](../../tasks/0005_patterns-skill/task.md) |
+| [coding](coding/SKILL.md) | General-purpose implementation skill; entered by task ID or "next task," updates the board as it works. | [0006](../../tasks/0006_coding-skill/task.md) |

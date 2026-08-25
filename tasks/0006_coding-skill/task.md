@@ -2,7 +2,7 @@
 id: 0006
 title: Coding skill
 type: skill
-status: todo
+status: done
 ---
 
 ## Summary
@@ -26,4 +26,6 @@ order since it only needs to know patterns/ conventions).
 See screenshots/ in this folder.
 
 ## Outcome
-(fill in when done)
+Created .claude/skills/coding/SKILL.md and registered it in
+.claude/skills/README.md. This is the last of the six tasks from the
+original foundation plan (0001-0006) — all now done.
