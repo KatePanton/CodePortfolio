@@ -12,3 +12,4 @@ already `in-progress`.
 | 0004 | Ai-docs skill | skill | done | [tasks/0004_ai-docs-skill](0004_ai-docs-skill/task.md) |
 | 0005 | Patterns skill | skill | done | [tasks/0005_patterns-skill](0005_patterns-skill/task.md) |
 | 0006 | Coding skill | skill | done | [tasks/0006_coding-skill](0006_coding-skill/task.md) |
+| 0007 | Fix mattpocock skill dependencies | skill | done | [tasks/0007_fix-mattpocock-dependencies](0007_fix-mattpocock-dependencies/task.md) |
