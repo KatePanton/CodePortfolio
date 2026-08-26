@@ -1,0 +1,74 @@
+.card {
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.id {
+  font-family: ui-monospace, monospace;
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+}
+
+.title {
+  font-weight: 500;
+  color: var(--color-text-strong);
+}
+
+.badges {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  border-radius: 9999px;
+  background-color: var(--color-surface);
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-surface-text);
+}
+
+.summary {
+  margin-top: 0.75rem;
+}
+
+.section {
+  margin-top: 0.75rem;
+}
+
+.section:first-child {
+  margin-top: 0;
+}
+
+.sectionHeading {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+.sectionBody {
+  margin-top: 0.25rem;
+}
+
+.decisionGroup {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.decisionGroup:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}

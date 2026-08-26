@@ -7,6 +7,7 @@ import About from './pages/About'
 import NotFound from './pages/NotFound'
 
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
+const Process = lazy(() => import('./pages/Process/Process'))
 
 function App() {
   return (
@@ -23,6 +24,14 @@ function App() {
           }
         />
         <Route path="about" element={<About />} />
+        <Route
+          path="process"
+          element={
+            <Suspense fallback={null}>
+              <Process />
+            </Suspense>
+          }
+        />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
