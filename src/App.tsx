@@ -7,7 +7,7 @@ import About from './pages/About'
 import NotFound from './pages/NotFound'
 
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
-const Process = lazy(() => import('./pages/Process'))
+const Process = lazy(() => import('./pages/Process/Process'))
 
 function App() {
   return (

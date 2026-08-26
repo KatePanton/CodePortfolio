@@ -16,7 +16,7 @@ it's disclosing. Styled with a CSS Module (see
 [css-modules-styling.md](css-modules-styling.md)):
 
 ```tsx
-// src/components/Disclosure.tsx
+// src/components/Disclosure/Disclosure.tsx
 import { useState, type ReactNode } from 'react'
 import styles from './Disclosure.module.css'
 

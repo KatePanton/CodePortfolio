@@ -1,7 +1,7 @@
-import type { TaskEntry } from '../data/tasks'
+import type { TaskEntry } from '../../data/tasks'
 import styles from './TimelineCard.module.css'
-import Disclosure from './Disclosure'
-import Markdown from './Markdown'
+import Disclosure from '../Disclosure/Disclosure'
+import Markdown from '../Markdown/Markdown'
 
 function Section({ heading, content }: { heading: string; content: string }) {
   if (!content) return null

@@ -24,8 +24,11 @@ was dictating it.
    palette isn't duplicated as hex literals across files.
 
 ## Decision
-Component structure: option 2 — `src/components/Disclosure.tsx` (generic)
-and `src/components/TimelineCard.tsx` (domain-specific, uses `Disclosure`).
+Component structure: option 2 — `src/components/Disclosure/Disclosure.tsx`
+(generic) and `src/components/TimelineCard/TimelineCard.tsx`
+(domain-specific, uses `Disclosure`). Each component lives in its own
+folder alongside its `.module.css` (e.g. `Disclosure/Disclosure.tsx` +
+`Disclosure/Disclosure.module.css`).
 
 Styling: option 2 — CSS Modules + shared color tokens, applied to the new
 Build Log components (`Disclosure`, `Markdown`, `TimelineCard`, `Process`)

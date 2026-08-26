@@ -2,24 +2,20 @@
 
 ## When to use it
 
-For any new or substantially-rewritten component going forward. Existing
-pages (`Home`, `Projects`, `ProjectDetail`, `About`, `Layout`) still style
-with inline Tailwind utility classes and are **not** being retrofitted —
-this pattern applies to new work only, starting with the Build Log page
-(task 0010). Converting an existing page to this approach is its own task,
-not a side effect of touching that file for something else.
+For any new or substantially-rewritten component going forward.
 
 ## The shape
 
-Each component gets a sibling `.module.css` file:
+Each component gets its own folder, holding the `.tsx` and its sibling
+`.module.css`:
 
 ```
-src/components/TimelineCard.tsx
-src/components/TimelineCard.module.css
+src/components/TimelineCard/TimelineCard.tsx
+src/components/TimelineCard/TimelineCard.module.css
 ```
 
 ```css
-/* TimelineCard.module.css */
+/* TimelineCard/TimelineCard.module.css */
 .card {
   border-radius: 0.5rem;
   border: 1px solid var(--color-border);
@@ -29,10 +25,10 @@ src/components/TimelineCard.module.css
 
 ```tsx
 // TimelineCard.tsx
-import styles from './TimelineCard.module.css'
+import styles from "./TimelineCard.module.css";
 
 export default function TimelineCard() {
-  return <article className={styles.card}>...</article>
+  return <article className={styles.card}>...</article>;
 }
 ```
 
@@ -81,6 +77,3 @@ automatic.
 
 - No Tailwind utility classes in files using this pattern — it's one or
   the other per component, not mixed.
-- Doesn't retrofit existing Tailwind-styled pages. The codebase currently
-  has both approaches side by side; that's expected, not a bug to fix
-  incidentally.

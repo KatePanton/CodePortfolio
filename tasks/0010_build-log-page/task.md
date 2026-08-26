@@ -25,9 +25,11 @@ task has real screenshots yet.
 
 Order: oldest to newest, 0001 at the top.
 
-New files: `src/data/tasks.ts`, `src/components/Markdown.tsx`,
-`src/components/Disclosure.tsx`, `src/components/TimelineCard.tsx`,
-`src/pages/Process.tsx`. Route added to `src/App.tsx` via the existing
+New files: `src/data/tasks.ts`, `src/components/Markdown/Markdown.tsx`,
+`src/components/Disclosure/Disclosure.tsx`,
+`src/components/TimelineCard/TimelineCard.tsx`,
+`src/pages/Process/Process.tsx` (each folderised alongside its sibling
+`.module.css`). Route added to `src/App.tsx` via the existing
 lazy/Suspense pattern (like `ProjectDetail`). Nav link added to
 `src/components/Layout.tsx`.
 
@@ -58,8 +60,8 @@ Built `src/data/tasks.ts` (build-time `import.meta.glob` loader + hand-rolled
 frontmatter/section parser — needed `import: 'default'` alongside
 `query: '?raw'` to actually unwrap to a string at runtime, and normalizes
 CRLF line endings since this repo's files use Windows line endings),
-`src/components/Markdown.tsx`, `src/components/Disclosure.tsx`,
-`src/components/TimelineCard.tsx`, and `src/pages/Process.tsx`. Added the
+`src/components/Markdown/Markdown.tsx`, `src/components/Disclosure/Disclosure.tsx`,
+`src/components/TimelineCard/TimelineCard.tsx`, and `src/pages/Process/Process.tsx`. Added the
 `/process` route (lazy-loaded) and a "Build Log" nav link. All five
 components style via CSS Modules (`*.module.css`) against shared color
 tokens in `src/index.css`, not inline Tailwind classes — see decision doc.

@@ -1,5 +1,5 @@
-import TimelineCard from '../components/TimelineCard'
-import { tasks } from '../data/tasks'
+import TimelineCard from '../../components/TimelineCard/TimelineCard'
+import { tasks } from '../../data/tasks'
 import styles from './Process.module.css'
 
 export default function Process() {
