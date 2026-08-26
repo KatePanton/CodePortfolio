@@ -18,7 +18,7 @@ addition, no app code changes:
       18.2+/19+ support — but verify for real once installed)
 
 ## Decision doc
-none
+[decision.md](decision.md)
 
 ## Patterns
 None — dependency addition only.
@@ -34,3 +34,17 @@ launched/previewed for verification. Confirmed `npm run build` (tsc +
 vite build) and `npm run dev` both succeed with no peer-dependency
 conflicts or console errors. No app code changes — the new libraries aren't
 wired into any page yet; that's task 0010.
+
+## Changes forced by later work
+While building task 0010 (the Build Log page), test-driving `react-chrono`
+in the browser showed it's a much heavier, more feature-rich component than
+its docs summary suggested: a full toolbar (search, first/previous/next/
+last navigation, layout switch, density toggle, fullscreen) renders by
+default and has to be explicitly disabled, it pulls in `dayjs` as its own
+dependency, its main bundle is ~256KB unminified, and its theming is a
+JS-driven config system rather than something that plugs into Tailwind's
+CSS-based dark mode automatically. `react-chrono` was removed
+(`npm uninstall react-chrono`); the timeline shell is hand-rolled with
+plain Tailwind instead. `react-markdown` and `remark-gfm` are unaffected
+and still stand as installed. See [decision.md](decision.md) for the full
+reasoning.
