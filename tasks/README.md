@@ -14,3 +14,5 @@ already `in-progress`.
 | 0006 | Coding skill | skill | done | [tasks/0006_coding-skill](0006_coding-skill/task.md) |
 | 0007 | Fix mattpocock skill dependencies | skill | done | [tasks/0007_fix-mattpocock-dependencies](0007_fix-mattpocock-dependencies/task.md) |
 | 0008 | Vercel hosting | site-build | done | [tasks/0008_vercel-hosting](0008_vercel-hosting/task.md) |
+| 0009 | Add react-chrono and react-markdown dependencies | site-build | done | [tasks/0009_add-react-chrono-and-react-markdown](0009_add-react-chrono-and-react-markdown/task.md) |
+| 0010 | Build Log page (/process) | site-build | todo | [tasks/0010_build-log-page](0010_build-log-page/task.md) |
