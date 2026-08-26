@@ -12,21 +12,23 @@ demand.
 ## The shape
 
 A single generic component, content-agnostic — it knows nothing about what
-it's disclosing:
+it's disclosing. Styled with a CSS Module (see
+[css-modules-styling.md](css-modules-styling.md)):
 
 ```tsx
 // src/components/Disclosure.tsx
 import { useState, type ReactNode } from 'react'
+import styles from './Disclosure.module.css'
 
 export default function Disclosure({ label, children }: { label: string; children: ReactNode }) {
   const [open, setOpen] = useState(false)
 
   return (
-    <div>
-      <button type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open}>
+    <div className={styles.wrapper}>
+      <button type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open} className={styles.trigger}>
         {open ? `Hide ${label.toLowerCase()}` : label}
       </button>
-      {open && <div>{children}</div>}
+      {open && <div className={styles.content}>{children}</div>}
     </div>
   )
 }

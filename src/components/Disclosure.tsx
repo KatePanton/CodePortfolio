@@ -1,20 +1,21 @@
 import { useState, type ReactNode } from 'react'
+import styles from './Disclosure.module.css'
 
 export default function Disclosure({ label, children }: { label: string; children: ReactNode }) {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="mt-4 border-t border-neutral-100 pt-3 dark:border-neutral-800">
+    <div className={styles.wrapper}>
       <button
         type="button"
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
-        className="flex items-center gap-1 text-sm font-medium text-neutral-500 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+        className={styles.trigger}
       >
-        <span className={`inline-block transition-transform ${open ? 'rotate-90' : ''}`}>›</span>
+        <span className={`${styles.chevron} ${open ? styles.chevronOpen : ''}`}>›</span>
         {open ? `Hide ${label.toLowerCase()}` : label}
       </button>
-      {open && <div className="mt-3">{children}</div>}
+      {open && <div className={styles.content}>{children}</div>}
     </div>
   )
 }
