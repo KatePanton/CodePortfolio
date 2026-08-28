@@ -51,5 +51,21 @@ correct name/description/task-link, expand reveals each skill's full
 its task on `/process` correctly scrolls to that card. `npm run build` and
 `npm run lint` both pass cleanly (0 warnings/errors).
 
+**Follow-up after opening the PR**: user reported the 3-column grid didn't
+flow well once a card was expanded (cramped markdown in a 1/3-width
+column). Fixed with a pure-CSS approach — no JS reordering: switched
+`Skills.module.css` from `auto-fill` (an incidental column count) to an
+explicit `repeat(3, 1fr)` grid with responsive breakpoints, added an
+optional `onOpenChange` callback to `Disclosure` (kept backward-compatible;
+`TimelineCard`'s usage is unaffected) so `SkillCard` can apply
+`grid-column: 1 / -1` to itself while expanded. Standard CSS Grid
+auto-placement then naturally reflows everything: cards before the
+expanded one keep filling normal rows, the expanded card takes its own
+full-width row, later cards continue filling rows after it. Verified all
+three scenarios the user described (opening the 1st, 3rd, and 4th card)
+match exactly via direct DOM position checks in the browser. Also added a
+`max-width: 65ch` cap on `Disclosure`'s expanded content for readability
+now that cards can grow much wider.
+
 ## Changes forced by later work
 none

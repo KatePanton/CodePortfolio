@@ -4,6 +4,10 @@
   padding: 1rem;
 }
 
+.expanded {
+  grid-column: 1 / -1;
+}
+
 .title {
   font-weight: 500;
   color: var(--color-text-strong);

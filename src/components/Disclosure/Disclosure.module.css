@@ -33,4 +33,5 @@
 
 .content {
   margin-top: 0.75rem;
+  max-width: 65ch;
 }
