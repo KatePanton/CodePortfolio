@@ -8,6 +8,7 @@ import NotFound from './pages/NotFound'
 
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
 const Process = lazy(() => import('./pages/Process/Process'))
+const Skills = lazy(() => import('./pages/Skills/Skills'))
 
 function App() {
   return (
@@ -29,6 +30,14 @@ function App() {
           element={
             <Suspense fallback={null}>
               <Process />
+            </Suspense>
+          }
+        />
+        <Route
+          path="skills"
+          element={
+            <Suspense fallback={null}>
+              <Skills />
             </Suspense>
           }
         />

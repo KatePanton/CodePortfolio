@@ -26,6 +26,9 @@ export default function Layout() {
             <NavLink to="/process" className={navLinkClass}>
               Build Log
             </NavLink>
+            <NavLink to="/skills" className={navLinkClass}>
+              Skills
+            </NavLink>
           </div>
         </nav>
       </header>
