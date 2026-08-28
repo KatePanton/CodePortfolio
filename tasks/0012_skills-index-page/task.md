@@ -67,5 +67,21 @@ match exactly via direct DOM position checks in the browser. Also added a
 `max-width: 65ch` cap on `Disclosure`'s expanded content for readability
 now that cards can grow much wider.
 
+**Second follow-up**: user wanted opening one card to close any other open
+card (with the page scrolling to the top of the newly-opened one), plus a
+second "Hide details" trigger at the bottom of the expanded content, not
+just the top. Made `Disclosure` support an optional controlled mode (an
+`open` prop; falls back to its own internal state when omitted, so
+`TimelineCard`'s existing uncontrolled usage is untouched) and added a
+second trigger button after `children`, reusing the same toggle handler.
+`Skills.tsx` now owns a single `openSkill` state (name of the open skill,
+or `null`) passed down as `isOpen`/`onOpenChange`, so opening any card
+naturally closes whichever other one was open — it's just one value, not
+per-card state anymore. A `useEffect` on `openSkill` calls
+`scrollIntoView({ block: 'start' })` on the newly-opened card's element.
+Verified in the browser: opening a second card closes the first and
+scrolls correctly (checked via exact DOM positions before/after), and the
+bottom trigger collapses the card same as the top one.
+
 ## Changes forced by later work
 none

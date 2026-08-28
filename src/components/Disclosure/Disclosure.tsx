@@ -4,20 +4,22 @@ import styles from './Disclosure.module.css'
 export default function Disclosure({
   label,
   children,
+  open: controlledOpen,
   onOpenChange,
 }: {
   label: string
   children: ReactNode
+  open?: boolean
   onOpenChange?: (open: boolean) => void
 }) {
-  const [open, setOpen] = useState(false)
+  const [internalOpen, setInternalOpen] = useState(false)
+  const isControlled = controlledOpen !== undefined
+  const open = isControlled ? controlledOpen : internalOpen
 
   const toggle = () => {
-    setOpen((value) => {
-      const next = !value
-      onOpenChange?.(next)
-      return next
-    })
+    const next = !open
+    if (!isControlled) setInternalOpen(next)
+    onOpenChange?.(next)
   }
 
   return (
@@ -26,7 +28,15 @@ export default function Disclosure({
         <span className={`${styles.chevron} ${open ? styles.chevronOpen : ''}`}>›</span>
         {open ? `Hide ${label.toLowerCase()}` : label}
       </button>
-      {open && <div className={styles.content}>{children}</div>}
+      {open && (
+        <div className={styles.content}>
+          {children}
+          <button type="button" onClick={toggle} aria-expanded={open} className={styles.bottomTrigger}>
+            <span className={`${styles.chevron} ${styles.chevronOpen}`}>›</span>
+            {`Hide ${label.toLowerCase()}`}
+          </button>
+        </div>
+      )}
     </div>
   )
 }
