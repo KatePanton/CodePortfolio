@@ -5,14 +5,16 @@ export default function Disclosure({
   label,
   children,
   open: controlledOpen,
+  defaultOpen = false,
   onOpenChange,
 }: {
   label: string
   children: ReactNode
   open?: boolean
+  defaultOpen?: boolean
   onOpenChange?: (open: boolean) => void
 }) {
-  const [internalOpen, setInternalOpen] = useState(false)
+  const [internalOpen, setInternalOpen] = useState(defaultOpen)
   const isControlled = controlledOpen !== undefined
   const open = isControlled ? controlledOpen : internalOpen
 
