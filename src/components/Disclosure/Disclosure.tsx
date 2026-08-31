@@ -1,21 +1,42 @@
 import { useState, type ReactNode } from 'react'
 import styles from './Disclosure.module.css'
 
-export default function Disclosure({ label, children }: { label: string; children: ReactNode }) {
-  const [open, setOpen] = useState(false)
+export default function Disclosure({
+  label,
+  children,
+  open: controlledOpen,
+  onOpenChange,
+}: {
+  label: string
+  children: ReactNode
+  open?: boolean
+  onOpenChange?: (open: boolean) => void
+}) {
+  const [internalOpen, setInternalOpen] = useState(false)
+  const isControlled = controlledOpen !== undefined
+  const open = isControlled ? controlledOpen : internalOpen
+
+  const toggle = () => {
+    const next = !open
+    if (!isControlled) setInternalOpen(next)
+    onOpenChange?.(next)
+  }
 
   return (
     <div className={styles.wrapper}>
-      <button
-        type="button"
-        onClick={() => setOpen((value) => !value)}
-        aria-expanded={open}
-        className={styles.trigger}
-      >
+      <button type="button" onClick={toggle} aria-expanded={open} className={styles.trigger}>
         <span className={`${styles.chevron} ${open ? styles.chevronOpen : ''}`}>›</span>
         {open ? `Hide ${label.toLowerCase()}` : label}
       </button>
-      {open && <div className={styles.content}>{children}</div>}
+      {open && (
+        <div className={styles.content}>
+          {children}
+          <button type="button" onClick={toggle} aria-expanded={open} className={styles.bottomTrigger}>
+            <span className={`${styles.chevron} ${styles.chevronOpen}`}>›</span>
+            {`Hide ${label.toLowerCase()}`}
+          </button>
+        </div>
+      )}
     </div>
   )
 }

@@ -1,8 +1,17 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import TimelineCard from '../../components/TimelineCard/TimelineCard'
 import { tasks } from '../../data/tasks'
 import styles from './Process.module.css'
 
 export default function Process() {
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (!hash) return
+    document.getElementById(hash.slice(1))?.scrollIntoView()
+  }, [hash])
+
   return (
     <section>
       <h1 className={styles.heading}>Build Log</h1>
@@ -12,7 +21,7 @@ export default function Process() {
       </p>
       <ol className={styles.timeline}>
         {tasks.map((task) => (
-          <li key={task.id} className={styles.entry}>
+          <li key={task.id} id={`task-${task.id}`} className={styles.entry}>
             <span className={styles.dot} />
             <TimelineCard task={task} />
           </li>

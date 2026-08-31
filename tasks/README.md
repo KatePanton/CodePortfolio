@@ -17,6 +17,6 @@ already `in-progress`.
 | 0009 | Add react-chrono and react-markdown dependencies | site-build | done | [tasks/0009_add-react-chrono-and-react-markdown](0009_add-react-chrono-and-react-markdown/task.md) |
 | 0010 | Build Log page (/process) | site-build | done | [tasks/0010_build-log-page](0010_build-log-page/task.md) |
 | 0011 | CI on pull requests | site-build | done | [tasks/0011_ci-on-pull-requests](0011_ci-on-pull-requests/task.md) |
-| 0012 | Skills index page | site-build | todo | [tasks/0012_skills-index-page](0012_skills-index-page/task.md) |
+| 0012 | Skills index page | site-build | done | [tasks/0012_skills-index-page](0012_skills-index-page/task.md) |
 | 0013 | About page content | site-build | todo | [tasks/0013_about-page-content](0013_about-page-content/task.md) |
 | 0014 | Determine projects and content to include | site-build | todo | [tasks/0014_determine-projects-and-content](0014_determine-projects-and-content/task.md) |

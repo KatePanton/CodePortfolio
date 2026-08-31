@@ -1,0 +1,37 @@
+.heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-strong);
+}
+
+.intro {
+  margin-top: 0.5rem;
+  max-width: 36rem;
+  color: var(--color-text-muted);
+}
+
+.intro code {
+  border-radius: 0.25rem;
+  background-color: var(--color-surface);
+  padding: 0.125rem 0.375rem;
+  font-size: 0.875rem;
+}
+
+.grid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
