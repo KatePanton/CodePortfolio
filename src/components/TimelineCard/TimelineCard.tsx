@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import type { TaskEntry } from '../../data/tasks'
 import styles from './TimelineCard.module.css'
 import Disclosure from '../Disclosure/Disclosure'
@@ -17,9 +18,10 @@ function Section({ heading, content }: { heading: string; content: string }) {
 
 export default function TimelineCard({ task }: { task: TaskEntry }) {
   const hasExtra = Boolean(task.outcome || task.decision || task.changesForcedByLaterWork)
+  const articleRef = useRef<HTMLElement>(null)
 
   return (
-    <article className={styles.card}>
+    <article ref={articleRef} className={styles.card}>
       <div className={styles.header}>
         <span className={styles.id}>{task.id}</span>
         <h2 className={styles.title}>{task.title}</h2>
@@ -32,7 +34,12 @@ export default function TimelineCard({ task }: { task: TaskEntry }) {
         <Markdown>{task.summary}</Markdown>
       </div>
       {hasExtra && (
-        <Disclosure label="Full details">
+        <Disclosure
+          label="Full details"
+          onOpenChange={(open) => {
+            if (!open) articleRef.current?.scrollIntoView({ block: 'start' })
+          }}
+        >
           <Section heading="Outcome" content={task.outcome} />
           {task.decision && (
             <div className={styles.decisionGroup}>

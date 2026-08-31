@@ -83,5 +83,18 @@ Verified in the browser: opening a second card closes the first and
 scrolls correctly (checked via exact DOM positions before/after), and the
 bottom trigger collapses the card same as the top one.
 
+**Third follow-up**: closing a `TimelineCard` on the Build Log page via
+the bottom "Hide details" trigger left the viewport stranded wherever the
+user had scrolled to inside the (now-collapsed) content, far from the
+card itself. Fixed by giving `TimelineCard` a ref on its own `<article>`
+and passing `onOpenChange` to `Disclosure` (already generic/optional) that
+calls `scrollIntoView({ block: 'start' })` on close — self-contained
+within `TimelineCard`, no changes needed to `Disclosure` or `Process.tsx`.
+User noted this doesn't need to extend to the Skills page for now (its
+cards are short enough not to strand the viewport the same way). Verified
+in the browser: opened a card, scrolled 600px further down so the card was
+off-screen above, clicked the bottom trigger, and confirmed both that the
+card collapsed and the view landed back at the top of it.
+
 ## Changes forced by later work
 none
