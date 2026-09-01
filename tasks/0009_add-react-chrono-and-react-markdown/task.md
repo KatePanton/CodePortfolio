@@ -48,3 +48,14 @@ CSS-based dark mode automatically. `react-chrono` was removed
 plain Tailwind instead. `react-markdown` and `remark-gfm` are unaffected
 and still stand as installed. See [decision.md](decision.md) for the full
 reasoning.
+
+Ahead of task 0013 (About page content), which needs LinkedIn/GitHub-style
+icons and task 0014's project preview panels will need the same, installed
+`react-icons` (`^5.7.0`) — tree-shakeable SVG icon components, chosen over
+inline hand-rolled SVGs (this project's usual minimal-dependency default)
+because the icon set needed spans multiple brand/UI icons across two
+upcoming pages, and over a Font Awesome package or shields.io badge images
+because those pull in a stylesheet/font-loading system or external
+network-loaded images respectively, neither of which fits a build-time,
+`currentColor`-themeable icon on a dark-mode-aware site. Confirmed
+`npm run build` succeeds with no peer-dependency conflicts.
