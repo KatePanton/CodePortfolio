@@ -30,7 +30,7 @@ page at `/projects/:slug` with syntax-highlighted code.
 
 ## Deployment
 
-Live at [code-portfolio-pi.vercel.app](https://code-portfolio-pi.vercel.app/).
+Live at [katepanton.dev](https://katepanton.dev/).
 
 This repo includes a `vercel.json` with an SPA rewrite so client-side routes
 resolve correctly. Vercel detects the Vite preset automatically (build

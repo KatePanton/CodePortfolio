@@ -20,3 +20,4 @@ already `in-progress`.
 | 0012 | Skills index page | site-build | done | [tasks/0012_skills-index-page](0012_skills-index-page/task.md) |
 | 0013 | About page content | site-build | todo | [tasks/0013_about-page-content](0013_about-page-content/task.md) |
 | 0014 | Determine projects and content to include | site-build | todo | [tasks/0014_determine-projects-and-content](0014_determine-projects-and-content/task.md) |
+| 0015 | Custom domain for Vercel-hosted site | site-build | done | [tasks/0015_custom-domain-for-vercel-site](0015_custom-domain-for-vercel-site/task.md) |
