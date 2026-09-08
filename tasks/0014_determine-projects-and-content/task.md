@@ -2,7 +2,7 @@
 id: 0014
 title: Determine projects and content to include
 type: site-build
-status: in-progress
+status: done
 ---
 
 ## Summary
@@ -48,6 +48,10 @@ compact list for the brief tier. Added a `--color-accent` token to
 Widened `ProjectDetail`'s not-found check implicitly by having
 `getProject` only search the highlighted tier, so both unknown and
 brief-tier slugs redirect to `/projects`.
+
+Filling in the real content tracked by `content-checklist.md` was split
+into 5 follow-up tasks rather than left open-ended here: 0016-0019 (one
+per highlighted project) and 0020 (all 7 brief-tier entries as sub-goals).
 
 ## Changes forced by later work
 none
