@@ -2,11 +2,11 @@ import { Suspense, lazy } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
-import Projects from './pages/Projects'
+import Projects from './pages/Projects/Projects'
 import About from './pages/About'
 import NotFound from './pages/NotFound'
 
-const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
+const ProjectDetail = lazy(() => import('./pages/ProjectDetail/ProjectDetail'))
 const Process = lazy(() => import('./pages/Process/Process'))
 const Skills = lazy(() => import('./pages/Skills/Skills'))
 
