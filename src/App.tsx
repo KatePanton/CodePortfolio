@@ -2,11 +2,11 @@ import { Suspense, lazy } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
-import Projects from './pages/Projects'
+import Projects from './pages/Projects/Projects'
 import About from './pages/About'
 import NotFound from './pages/NotFound'
 
-const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
+const NormaliseImportDataDetail = lazy(() => import('./pages/Projects/normalise-import-data/ProjectDetail'))
 const Process = lazy(() => import('./pages/Process/Process'))
 const Skills = lazy(() => import('./pages/Skills/Skills'))
 
@@ -17,10 +17,10 @@ function App() {
         <Route index element={<Home />} />
         <Route path="projects" element={<Projects />} />
         <Route
-          path="projects/:slug"
+          path="projects/normalise-import-data"
           element={
             <Suspense fallback={null}>
-              <ProjectDetail />
+              <NormaliseImportDataDetail />
             </Suspense>
           }
         />

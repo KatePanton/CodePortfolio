@@ -19,6 +19,7 @@
   --color-surface: #f5f5f5;
   --color-surface-text: #525252;
   --color-dot: #a3a3a3;
+  --color-accent: #2563eb;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,5 +34,6 @@
     --color-surface: #262626;
     --color-surface-text: #d4d4d4;
     --color-dot: #525252;
+    --color-accent: #60a5fa;
   }
 }

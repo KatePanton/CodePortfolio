@@ -19,5 +19,10 @@ already `in-progress`.
 | 0011 | CI on pull requests | site-build | done | [tasks/0011_ci-on-pull-requests](0011_ci-on-pull-requests/task.md) |
 | 0012 | Skills index page | site-build | done | [tasks/0012_skills-index-page](0012_skills-index-page/task.md) |
 | 0013 | About page content | site-build | todo | [tasks/0013_about-page-content](0013_about-page-content/task.md) |
-| 0014 | Determine projects and content to include | site-build | todo | [tasks/0014_determine-projects-and-content](0014_determine-projects-and-content/task.md) |
+| 0014 | Determine projects and content to include | site-build | done | [tasks/0014_determine-projects-and-content](0014_determine-projects-and-content/task.md) |
 | 0015 | Custom domain for Vercel-hosted site | site-build | done | [tasks/0015_custom-domain-for-vercel-site](0015_custom-domain-for-vercel-site/task.md) |
+| 0016 | Worker Type Lifecycle project write-up | project-writeup | todo | [tasks/0016_worker-type-lifecycle-writeup](0016_worker-type-lifecycle-writeup/task.md) |
+| 0017 | Career Website Section project write-up | project-writeup | todo | [tasks/0017_career-website-section-writeup](0017_career-website-section-writeup/task.md) |
+| 0018 | Normalise Raw Import Data Stored Procedure project write-up | project-writeup | done | [tasks/0018_normalise-import-data-writeup](0018_normalise-import-data-writeup/task.md) |
+| 0019 | Affordability Assessment project write-up | project-writeup | todo | [tasks/0019_affordability-assessment-writeup](0019_affordability-assessment-writeup/task.md) |
+| 0020 | Brief-tier project write-ups | project-writeup | todo | [tasks/0020_brief-tier-project-writeups](0020_brief-tier-project-writeups/task.md) |
