@@ -4,6 +4,7 @@ export interface CodeSnippet {
   label: string
   language: string
   code: string
+  talkThrough: string
 }
 
 export interface ProjectScreenshot {
@@ -27,8 +28,8 @@ export interface HighlightedProject extends BaseProject {
   tier: 'highlighted'
   blurb: string
   screenshots?: ProjectScreenshot[]
+  problem: string
   snippets: CodeSnippet[]
-  talkThrough: string
 }
 
 export type Project = BriefProject | HighlightedProject

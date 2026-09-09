@@ -54,4 +54,9 @@ into 5 follow-up tasks rather than left open-ended here: 0016-0019 (one
 per highlighted project) and 0020 (all 7 brief-tier entries as sub-goals).
 
 ## Changes forced by later work
-none
+Task 0018 replaced the single generic `src/pages/ProjectDetail/` component
+and its `getProject(slug)`-driven dynamic route with one real page per
+highlighted project under `src/pages/Projects/<slug>/`, each statically
+importing its own data file and routed individually in `App.tsx`.
+`getProject` was removed. See
+[0018's decision.md](../0018_normalise-import-data-writeup/decision.md).
