@@ -7,6 +7,7 @@ import About from './pages/About'
 import NotFound from './pages/NotFound'
 
 const NormaliseImportDataDetail = lazy(() => import('./pages/Projects/normalise-import-data/ProjectDetail'))
+const AffordabilityAssessmentDetail = lazy(() => import('./pages/Projects/affordability-assessment/ProjectDetail'))
 const Process = lazy(() => import('./pages/Process/Process'))
 const Skills = lazy(() => import('./pages/Skills/Skills'))
 
@@ -21,6 +22,14 @@ function App() {
           element={
             <Suspense fallback={null}>
               <NormaliseImportDataDetail />
+            </Suspense>
+          }
+        />
+        <Route
+          path="projects/affordability-assessment"
+          element={
+            <Suspense fallback={null}>
+              <AffordabilityAssessmentDetail />
             </Suspense>
           }
         />
