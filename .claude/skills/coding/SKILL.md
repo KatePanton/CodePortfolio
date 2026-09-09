@@ -22,10 +22,30 @@ Mark the task `in-progress` (in both its own `task.md` and its
 
 ## Before writing code
 
-1. Read the task's `task.md` in full — Summary, any linked `Decision doc`,
+1. **Create the task's branch off up-to-date `origin/main` first** — before
+   reading anything into an edit, and before any plan-mode/exploration work
+   turns into real file changes:
+
+   ```
+   git fetch origin
+   git checkout -b task/NNNN-stub origin/main --no-track
+   ```
+
+   `--no-track` matters: `git checkout -b <branch> origin/main` without it
+   sets the new branch's upstream to `origin/main` itself. A later plain
+   `git push` then pushes straight onto `main`, skipping review entirely —
+   this actually happened on task 0018. With `--no-track`, there's no
+   upstream yet, so the first push must be an explicit
+   `git push -u origin task/NNNN-stub`, which creates the branch on the
+   remote instead of fast-forwarding main.
+
+   Don't just keep whatever branch happens to be checked out already (it
+   may be a stale branch left over from a prior task) — always branch fresh
+   off `origin/main`.
+2. Read the task's `task.md` in full — Summary, any linked `Decision doc`,
    and its `Patterns` field.
-2. Read root `CLAUDE.md` for project conventions (via `ai-docs`).
-3. Check `.claude/patterns/` via the `patterns` skill for a template to
+3. Read root `CLAUDE.md` for project conventions (via `ai-docs`).
+4. Check `.claude/patterns/` via the `patterns` skill for a template to
    follow. If the task's `Patterns` field already names one, use it; if not
    and one turns out to be relevant, follow `patterns`' lookup flow.
 
@@ -49,5 +69,7 @@ open or merge PRs; that's a separate step outside its scope.
 ## What this skill does not do
 
 - It doesn't create or renumber tasks — that's `task-management`.
-- It doesn't decide git/PR workflow — task completion here means the task
-  board is updated, not that a PR has been opened or merged.
+- It creates the task's own branch (see step 1 above) but goes no further
+  on git/PR workflow — it doesn't push, open, or merge a PR. Task
+  completion here means the task board is updated and the work is
+  committed on its branch, not that a PR has been opened or merged.
