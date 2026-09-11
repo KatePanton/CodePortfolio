@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom'
+import ScrollManager from './ScrollManager'
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   `text-sm font-medium transition-colors hover:text-neutral-900 dark:hover:text-neutral-100 ${
@@ -8,6 +9,7 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
 export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col bg-white text-neutral-700 dark:bg-neutral-950 dark:text-neutral-300">
+      <ScrollManager />
       <header className="border-b border-neutral-200 dark:border-neutral-800">
         <nav className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
           <NavLink to="/" className="font-semibold text-neutral-900 dark:text-neutral-100">

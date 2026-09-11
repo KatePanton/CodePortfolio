@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import Markdown from '../../../components/Markdown/Markdown'
 import ScreenshotGallery from '../../../components/ScreenshotGallery/ScreenshotGallery'
 import project from '../../../data/projects/highlighted/worker-type-lifecycle'
+import { componentsBySlug } from '../../../data/components'
 import styles from './ProjectDetail.module.css'
 
 export default function ProjectDetail() {
@@ -41,6 +43,23 @@ export default function ProjectDetail() {
               {snippet.code}
             </SyntaxHighlighter>
           </div>
+          {snippet.components && (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {snippet.components.map((slug) => {
+                const component = componentsBySlug[slug]
+                if (!component) return null
+                return (
+                  <Link
+                    key={slug}
+                    to={`/components/${slug}`}
+                    className="inline-block rounded-md bg-neutral-900 px-3 py-1.5 text-sm font-medium text-white hover:bg-neutral-700 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300"
+                  >
+                    View {component.name} component
+                  </Link>
+                )
+              })}
+            </div>
+          )}
         </div>
       ))}
     </article>

@@ -6,6 +6,8 @@ export interface CodeSnippet {
   code: string
   talkThrough: string
   screenshot?: ProjectScreenshot
+  /** Slugs of components (src/data/components/<slug>.ts) whose own code is shown inline in this snippet. */
+  components?: string[]
 }
 
 export interface ProjectScreenshot {

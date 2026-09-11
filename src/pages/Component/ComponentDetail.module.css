@@ -1,0 +1,39 @@
+.backLink {
+  display: inline-block;
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.backLink:hover {
+  color: var(--color-text-strong);
+}
+
+.heading {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-strong);
+}
+
+.subheading {
+  margin-top: 0.25rem;
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.description {
+  margin-top: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.snippetBlock {
+  margin-top: 1.5rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+}
