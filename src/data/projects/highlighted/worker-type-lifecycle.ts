@@ -21,6 +21,7 @@ const project: HighlightedProject = {
     {
       label: 'Quiz — collecting answers',
       language: 'tsx',
+      components: ['custom-image-response'],
       code: `import { route } from 'ziggy-js';
 import { router } from '@inertiajs/react';
 
@@ -124,6 +125,7 @@ export default function ReportLayout({
     {
       label: 'Report page — composing into the shared layout',
       language: 'tsx',
+      components: ['custom-wt-report'],
       code: `export default function WorkerTypeResultPage({ report, breadcrumbs }) {
   const { setViewOption, currentSection, viewOptionsKeyLabel } = useReportStore();
 
@@ -162,6 +164,7 @@ export default function ReportLayout({
     {
       label: 'Lesson — a standalone walkthrough of the same content',
       language: 'tsx',
+      components: ['custom-wt-lesson'],
       code: `import { router } from "@inertiajs/react";
 import { route } from "ziggy-js";
 
