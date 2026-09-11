@@ -1,0 +1,45 @@
+.heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-strong);
+}
+
+.blurb {
+  margin-top: 0.5rem;
+  color: var(--color-text-muted);
+}
+
+.tags {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.tag {
+  border-radius: 9999px;
+  background-color: var(--color-surface);
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-surface-text);
+}
+
+.screenshots {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.screenshots img {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.sectionHeading {
+  margin-top: 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-strong);
+}
