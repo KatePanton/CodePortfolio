@@ -20,6 +20,7 @@
   --color-surface-text: #525252;
   --color-dot: #a3a3a3;
   --color-accent: #2563eb;
+  --color-overlay: rgba(0, 0, 0, 0.7);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -11,6 +11,7 @@ export interface CodeSnippet {
 export interface ProjectScreenshot {
   src: string
   alt: string
+  caption?: string
 }
 
 interface BaseProject {
