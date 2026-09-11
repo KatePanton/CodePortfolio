@@ -1,0 +1,30 @@
+.snippet {
+  margin-top: 1rem;
+}
+
+.snippetLabel {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.snippetTalkThrough {
+  margin-top: 0.5rem;
+}
+
+.snippetScreenshot {
+  margin-top: 0.75rem;
+}
+
+.snippetScreenshot img {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.snippetBlock {
+  margin-top: 0.75rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+}

@@ -7,6 +7,7 @@ import About from './pages/About'
 import NotFound from './pages/NotFound'
 
 const NormaliseImportDataDetail = lazy(() => import('./pages/Projects/normalise-import-data/ProjectDetail'))
+const CareerWebsiteSectionDetail = lazy(() => import('./pages/Projects/career-website-section/ProjectDetail'))
 const Process = lazy(() => import('./pages/Process/Process'))
 const Skills = lazy(() => import('./pages/Skills/Skills'))
 
@@ -21,6 +22,14 @@ function App() {
           element={
             <Suspense fallback={null}>
               <NormaliseImportDataDetail />
+            </Suspense>
+          }
+        />
+        <Route
+          path="projects/career-website-section"
+          element={
+            <Suspense fallback={null}>
+              <CareerWebsiteSectionDetail />
             </Suspense>
           }
         />

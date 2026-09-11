@@ -5,6 +5,7 @@ export interface CodeSnippet {
   language: string
   code: string
   talkThrough: string
+  screenshot?: ProjectScreenshot
 }
 
 export interface ProjectScreenshot {
@@ -30,6 +31,8 @@ export interface HighlightedProject extends BaseProject {
   screenshots?: ProjectScreenshot[]
   problem: string
   snippets: CodeSnippet[]
+  /** Rendered as a tab switcher instead of a flat list — for projects where the code itself splits into the same tabs the UI does. */
+  tabbedSnippets?: CodeSnippet[]
 }
 
 export type Project = BriefProject | HighlightedProject
