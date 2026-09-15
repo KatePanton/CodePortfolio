@@ -1,4 +1,5 @@
 import type { BriefProject } from './types'
+import toastNotificationsDetail from './brief-detail/toast-notifications'
 
 export const briefProjects: BriefProject[] = [
   {
@@ -40,6 +41,7 @@ export const briefProjects: BriefProject[] = [
     blurb:
       'A themed toast-notification system built on react-toastify, with variant-based icon styling for different severities and layout components for plain, single-action, and dual-action toasts.',
     techStack: ['React', 'TypeScript', 'react-toastify', 'Font Awesome', 'Tailwind CSS'],
+    detail: toastNotificationsDetail,
   },
   {
     slug: 'storybook-component-library',

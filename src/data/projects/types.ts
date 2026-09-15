@@ -40,8 +40,6 @@ interface BaseProject {
 export interface BriefProject extends BaseProject {
   tier: 'brief'
   blurb: string
-  codeLink?: string
-  /** Presence of this (not any individual field) is what shows the "View details" link on the Projects page. */
   detail?: BriefProjectDetail
 }
 
