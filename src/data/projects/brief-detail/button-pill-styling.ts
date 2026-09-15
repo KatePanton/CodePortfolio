@@ -26,14 +26,6 @@ const detail: BriefProjectDetail = {
   cyan: "bg-cyan-solid-background text-cyan-solid-text",
   "dark-green": "bg-dark-green-solid-background text-dark-green-solid-text",
   "light-green": "bg-light-green-solid-background text-light-green-solid-text",
-  magenta: "bg-magenta-solid-background text-magenta-solid-text",
-  orange: "bg-orange-solid-background text-orange-solid-text",
-  pink: "bg-pink-solid-background text-pink-solid-text",
-  purple: "bg-purple-solid-background text-purple-solid-text",
-  red: "bg-red-solid-background text-red-solid-text",
-  teal: "bg-teal-solid-background text-teal-solid-text",
-  violet: "bg-violet-solid-background text-violet-solid-text",
-  yellow: "bg-yellow-solid-background text-yellow-solid-text",
 };
 
 export const tonalStyles = {
@@ -45,14 +37,6 @@ export const tonalStyles = {
   cyan: "bg-cyan-background text-cyan-text",
   "dark-green": "bg-dark-green-background text-dark-green-text",
   "light-green": "bg-light-green-background text-light-green-text",
-  magenta: "bg-magenta-background text-magenta-text",
-  orange: "bg-orange-background text-orange-text",
-  pink: "bg-pink-background text-pink-text",
-  purple: "bg-purple-background text-purple-text",
-  red: "bg-red-background text-red-text",
-  teal: "bg-teal-background text-teal-text",
-  violet: "bg-violet-background text-violet-text",
-  yellow: "bg-yellow-background text-yellow-text",
 };
 
 export const outlineStyles = {
@@ -67,14 +51,6 @@ export const outlineStyles = {
     "bg-transparent text-dark-green-text border-2 border-dark-green-text",
   "light-green":
     "bg-transparent text-light-green-text border-2 border-light-green-text",
-  magenta: "bg-transparent text-magenta-text border-2 border-magenta-text",
-  orange: "bg-transparent text-orange-text border-2 border-orange-text",
-  pink: "bg-transparent text-pink-text border-2 border-pink-text",
-  purple: "bg-transparent text-purple-text border-2 border-purple-text",
-  red: "bg-transparent text-red-text border-2 border-red-text",
-  teal: "bg-transparent text-teal-text border-2 border-teal-text",
-  violet: "bg-transparent text-violet-text border-2 border-violet-text",
-  yellow: "bg-transparent text-yellow-text border-2 border-yellow-text",
 };
 
 export const ghostStyles = {
@@ -86,14 +62,6 @@ export const ghostStyles = {
   cyan: "bg-transparent text-cyan-text",
   "dark-green": "bg-transparent text-dark-green-text",
   "light-green": "bg-transparent text-light-green-text",
-  magenta: "bg-transparent text-magenta-text",
-  orange: "bg-transparent text-orange-text",
-  pink: "bg-transparent text-pink-text",
-  purple: "bg-transparent text-purple-text",
-  red: "bg-transparent text-red-text",
-  teal: "bg-transparent text-teal-text",
-  violet: "bg-transparent text-violet-text",
-  yellow: "bg-transparent text-yellow-text",
 };
 
 export const hoverStyles = {
@@ -105,14 +73,6 @@ export const hoverStyles = {
   cyan: "hover:text-cyan-text hover:bg-cyan-hover",
   "dark-green": "hover:text-dark-green-text hover:bg-dark-green-hover",
   "light-green": "hover:text-light-green-text hover:bg-light-green-hover",
-  magenta: "hover:text-magenta-text hover:bg-magenta-hover",
-  orange: "hover:text-orange-text hover:bg-orange-hover",
-  pink: "hover:text-pink-text hover:bg-pink-hover",
-  purple: "hover:text-purple-text hover:bg-purple-hover",
-  red: "hover:text-red-text hover:bg-red-hover",
-  teal: "hover:text-teal-text hover:bg-teal-hover",
-  violet: "hover:text-violet-text hover:bg-violet-hover",
-  yellow: "hover:text-yellow-text hover:bg-yellow-hover",
 };
 
 export const pastelBackgroundStyles = {
@@ -130,19 +90,6 @@ export const pastelBackgroundStyles = {
     "bg-dark-green-background-pastel text-dark-green-text border-1 border-dark-green-background-pastel",
   "light-green":
     "bg-light-green-background-pastel text-light-green-text border-1 border-light-green-background-pastel",
-  magenta:
-    "bg-magenta-background-pastel text-magenta-text border-1 border-magenta-background-pastel",
-  orange:
-    "bg-orange-background-pastel text-orange-text border-1 border-orange-background-pastel",
-  pink: "bg-pink-background-pastel text-pink-text border-1 border-pink-background-pastel",
-  purple:
-    "bg-purple-background-pastel text-purple-text border-1 border-purple-background-pastel",
-  red: "bg-red-background-pastel text-red-text border-1 border-red-background-pastel",
-  teal: "bg-teal-background-pastel text-teal-text border-1 border-teal-background-pastel",
-  violet:
-    "bg-violet-background-pastel text-violet-text border-1 border-violet-background-pastel",
-  yellow:
-    "bg-yellow-background-pastel text-yellow-text border-1 border-yellow-background-pastel",
 };
 
 export const plainBackgroundStyles = {
@@ -154,14 +101,6 @@ export const plainBackgroundStyles = {
   cyan: "text-cyan-text border-1 bg-white border-border-subtle",
   "dark-green": "text-dark-green-text border-1 bg-white border-border-subtle",
   "light-green": "text-light-green-text border-1 bg-white border-border-subtle",
-  magenta: "text-magenta-text border-1 bg-white border-border-subtle",
-  orange: "text-orange-text border-1 bg-white border-border-subtle",
-  pink: "text-pink-text border-1 bg-white border-border-subtle",
-  purple: "text-purple-text border-1 bg-white border-border-subtle",
-  red: "text-red-text border-1 bg-white border-border-subtle",
-  teal: "text-teal-text border-1 bg-white border-border-subtle",
-  violet: "text-violet-text border-1 bg-white border-border-subtle",
-  yellow: "text-yellow-text border-1 bg-white border-border-subtle",
 };
 
 export const borderStyles = {
@@ -173,14 +112,6 @@ export const borderStyles = {
   cyan: "border-cyan-solid-background",
   "dark-green": "border-dark-green-solid-background",
   "light-green": "border-light-green-solid-background",
-  magenta: "border-magenta-solid-background",
-  orange: "border-orange-solid-background",
-  pink: "border-pink-solid-background",
-  purple: "border-purple-solid-background",
-  red: "border-red-solid-background",
-  teal: "border-teal-solid-background",
-  violet: "border-violet-solid-background",
-  yellow: "border-yellow-solid-background",
 };
 `,
     },

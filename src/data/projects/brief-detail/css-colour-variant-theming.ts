@@ -70,62 +70,6 @@ const detail: BriefProjectDetail = {
   --color-light-green-solid-text: var(--color-lime-50);
   --color-light-green-solid-background: var(--color-lime-600);
   --color-light-green-hover: var(--color-lime-200);
-
-  --color-magenta-text: var(--color-fuchsia-600);
-  --color-magenta-background: var(--color-fuchsia-100);
-  --color-magenta-background-pastel: var(--color-fuchsia-50);
-  --color-magenta-solid-text: var(--color-fuchsia-50);
-  --color-magenta-solid-background: var(--color-fuchsia-600);
-  --color-magenta-hover: var(--color-fuchsia-200);
-
-  --color-orange-text: var(--color-orange-700);
-  --color-orange-background: var(--color-orange-100);
-  --color-orange-background-pastel: var(--color-orange-50);
-  --color-orange-solid-text: var(--color-orange-950);
-  --color-orange-solid-background: var(--color-orange-400);
-  --color-orange-hover: var(--color-orange-200);
-
-  --color-pink-text: var(--color-pink-600);
-  --color-pink-background: var(--color-pink-100);
-  --color-pink-background-pastel: var(--color-pink-50);
-  --color-pink-solid-text: var(--color-pink-50);
-  --color-pink-solid-background: var(--color-pink-600);
-  --color-pink-hover: var(--color-pink-200);
-
-  --color-purple-text: var(--color-purple-700);
-  --color-purple-background: var(--color-purple-100);
-  --color-purple-background-pastel: var(--color-purple-50);
-  --color-purple-solid-text: var(--color-purple-50);
-  --color-purple-solid-background: var(--color-purple-600);
-  --color-purple-hover: var(--color-purple-200);
-
-  --color-red-text: var(--color-red-600);
-  --color-red-background: var(--color-red-100);
-  --color-red-background-pastel: var(--color-red-50);
-  --color-red-solid-text: var(--color-red-50);
-  --color-red-solid-background: var(--color-red-600);
-  --color-red-hover: var(--color-red-200);
-
-  --color-teal-text: var(--color-teal-600);
-  --color-teal-background: var(--color-teal-100);
-  --color-teal-background-pastel: var(--color-teal-50);
-  --color-teal-solid-text: var(--color-teal-900);
-  --color-teal-solid-background: var(--color-teal-400);
-  --color-teal-hover: var(--color-teal-200);
-
-  --color-violet-text: var(--color-violet-600);
-  --color-violet-background: var(--color-violet-100);
-  --color-violet-background-pastel: var(--color-violet-50);
-  --color-violet-solid-text: var(--color-violet-50);
-  --color-violet-solid-background: var(--color-violet-600);
-  --color-violet-hover: var(--color-violet-200);
-
-  --color-yellow-text: var(--color-amber-600);
-  --color-yellow-background: var(--color-yellow-100);
-  --color-yellow-background-pastel: var(--color-yellow-50);
-  --color-yellow-solid-text: var(--color-yellow-950);
-  --color-yellow-solid-background: var(--color-yellow-400);
-  --color-yellow-hover: var(--color-yellow-200);
 }
 `,
     },
@@ -142,15 +86,7 @@ const detail: BriefProjectDetail = {
   | "blue"
   | "cyan"
   | "dark-green"
-  | "light-green"
-  | "magenta"
-  | "orange"
-  | "pink"
-  | "purple"
-  | "red"
-  | "teal"
-  | "violet"
-  | "yellow";
+  | "light-green";
 `,
     },
   ],
