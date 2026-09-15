@@ -10,9 +10,9 @@ const project: HighlightedProject = {
   name: 'Career Exploration & Matching Section',
   techStack: ['React', 'TypeScript', 'Inertia.js', 'Tailwind CSS', 'Apache ECharts', 'Zustand'],
   blurb:
-    "A browsable, filterable careers section built as part of a larger student career-guidance platform. Users explore a card grid of careers with a save/favourite toggle, then drill into a five-tab detail page per career covering its summary, day-to-day overview, required skills, education path, and career progression. The summary tab renders a live radar chart comparing a career's average suitability profile against the user's own assessment results, switchable between two different scoring models (a worker-type model and a Big Five personality model). Each tab pulls its own slice of a single nested `career` prop and normalizes it locally — flattening reference objects into pill lists, adjusting inconsistent score scales — so the page component itself stays a thin, declarative map from tabs to data. The favourite toggle uses optimistic UI so saving a career feels instant despite being a full server round-trip underneath.",
+    "A browsable, filterable careers section built as part of a larger student career-guidance platform. Users explore a card grid of careers with a save/favourite toggle, then drill into a five-tab detail page per career (shown below) covering its summary, day-to-day overview, required skills, education path, and career progression. The summary tab renders a live radar chart comparing a career's average suitability profile against the user's own assessment results, switchable between two different scoring models (a worker-type RAISEC model and a Big Five personality model). Each tab pulls its own slice of a single nested `career` prop and normalizes it locally — flattening reference objects into pill lists, adjusting inconsistent score scales — so the page component itself stays a thin, declarative map from tabs to data. The favourite toggle uses optimistic UI so saving a career feels instant despite being a full server round-trip underneath. The content shown is mostly placeholder as the frontend requirements drove the backend data structure.",
   problem:
-    "The detail page needed a live chart comparison — a career's average suitability plotted against the user's own results, toggled between two different scoring models — built on top of a charting library that manages its own imperative instance rather than being a natural React citizen. That meant handling the chart's lifecycle manually (creating and disposing the instance as the view or data changed) and reading color values out of the site's own CSS custom properties at runtime so the chart stayed in sync with the site's theme rather than hardcoding colors that would drift. Elsewhere, the same nested `career` object had to feed five very different tabs, each expecting its own shape (pill lists, metric scores, linked lists) — so each tab needed its own small adapter layer to reshape a slice of that raw data, keeping the parent page free of that logic. And because the favourite/save toggle triggers a full server request, it needed optimistic local state with rollback-on-error so the interaction still felt instant.",
+    "The detail page needed a live chart comparison — a career's average suitability plotted against the user's own results, toggled between two different scoring models — built on top of a charting library that manages its own imperative instance rather than being a natural React citizen. That meant handling the chart's lifecycle manually (creating and disposing the instance as the view or data changed) and reading color values out of the site's own custom CSS properties at runtime so the chart stayed in sync with the site's theme rather than hardcoding colors that would drift. Elsewhere, the same nested `career` object had to feed five very different tabs, each expecting its own shape (pill lists, metric scores, linked lists) — so each tab needed its own small adapter layer to reshape a slice of that raw data, keeping the parent page free of that logic. And because the favourite/save toggle triggers a full server request, it needed optimistic local state with rollback-on-error so the interaction still felt instant.",
   screenshots: [
     {
       src: careerDashboardSummary,
@@ -98,7 +98,7 @@ export default function CareerDetailsPage({ career, breadcrumbs }) {
   );
 }`,
       talkThrough:
-        "The page itself never renders a stat tile or a chart directly — it just maps each tab to the slice of the nested `career` prop that tab needs, and hands off to a dedicated component. That keeps this file purely declarative: adding or reordering a tab is a matter of adding another `TabPane`, not touching any rendering logic. The `//TBC` markers are left in deliberately rather than faked — they mark fields (like the user's own assessment results and salary) that were waiting on a separate part of the platform to land, so the tab still renders correctly with a career's real data while those specific fields are stubbed.",
+        "The page itself never renders a stat tile or a chart directly — it just maps each tab to the slice of the nested `career` prop that tab needs, and hands off to a dedicated component. That keeps this file purely declarative: adding or reordering a tab is a matter of adding another `TabPane`, not touching any rendering logic. The `//TBC` markers are left in deliberately rather than faked — they mark fields (like the user's own assessment results and salary) that were waiting on data from the content creation team, so the tab still renders correctly with a career's real data while those specific fields are stubbed.",
     },
     {
       label: 'Match visualization — the radar chart',
@@ -247,7 +247,7 @@ export default function CareerMatchGraphs({ graphData }) {
   );
 }`,
       talkThrough:
-        "ECharts manages its own chart instance imperatively, so this component's job is really lifecycle management: a ref holds the live instance, and every time the selected view or the incoming data changes, the previous instance is disposed and a fresh one created before `setOption` is called — with cleanup on unmount too, so nothing leaks across re-renders. Rather than hardcoding chart colors, they're read once from the site's own CSS custom properties via `getComputedStyle`, so the chart automatically matches whatever theme is active instead of drifting out of sync with a separate color constant. The two view options (worker type vs. personality) share the same rendering path but build a differently-shaped `option` object, toggled by a small sibling component.",
+        "ECharts manages its own chart instance imperatively, so this component's job is really lifecycle management: a ref holds the live instance, and every time the selected view or the incoming data changes, the previous instance is disposed and a fresh one created before `setOption` is called — with cleanup on unmount too, so nothing leaks across re-renders. Rather than hardcoding chart colors, they're read once from the site's own CSS custom properties via `getComputedStyle`, so the chart automatically matches whatever theme is active instead of drifting out of sync with a separate color constant. The two view options (worker type vs. personality) share the same rendering path but build a differently-shaped `option` object, toggled by a small sibling component. //TBC was the team accepted marker for outstanding data or unknown field names waiting on CMS creation or backend structuring.",
     },
     {
       label: 'Favouriting a career — optimistic UI hook',
@@ -320,7 +320,7 @@ export function useFavourites(favouriteKey: FavouriteKey, initialFavourites: str
   };
 }`,
       talkThrough:
-        "Saving a career updates local state and fires the server request in the background rather than waiting for a response before showing the change — so the card's heart icon flips instantly. If the request fails, the local state gets rolled back to what it was before the optimistic update, and a per-id `loading` map means only the card being toggled shows a spinner rather than the whole grid. Both add and remove go through the same `router` request pattern wrapped in a promise, so the calling code (`toggleFavourite`) doesn't need to know which HTTP verb or endpoint shape it's dealing with.",
+        "This is a generic component used across multiple sections of the site - careers, school subjects, and tertiary institutions. It is used on the card grid pages of these sections as a standard heart icon on each <career> card. It is also in the page header section (not shown in images) of the detail pages. Saving a <career> updates local state and fires the server request in the background rather than waiting for a response before showing the change — so the card's heart icon flips instantly. If the request fails, the local state gets rolled back to what it was before the optimistic update, and a per-id `loading` map means only the card being toggled shows a spinner rather than the whole grid. Both add and remove go through the same `router` request pattern wrapped in a promise, so the calling code (`toggleFavourite`) doesn't need to know which HTTP verb or endpoint shape it's dealing with.",
     },
   ],
   tabbedSnippets: [
@@ -418,28 +418,15 @@ export default function CareerDetailSummaryTab({
   );
 }`,
       talkThrough:
-        "This tab is a pure layout — every value it renders (match %, salary, education, growth, the intro text, the chart data) arrives as a prop already shaped by the parent page, so the component itself has no data logic at all. The four stat tiles reuse the same `InformationBlock` presentational component with a different icon/color per tile, and the chart is delegated entirely to `CareerMatchGraphs` rather than this tab knowing anything about how it renders.",
+        "This tab is a pure layout — every value it renders (match %, salary, education, growth, the intro text, the chart data) arrives as a prop already shaped by the parent page, so the component itself has no data logic at all. The four stat tiles reuse the same `InformationBlock` presentational component with a different icon/color per tile, and the chart is delegated entirely to `CareerMatchGraphs` rather than this tab knowing anything about how it renders. The 'Edit widgets' button is a placeholder for a future feature, so it doesn't do anything yet, the same goes for the 'Things to Know' 'View all' button.",
       screenshot: { src: careerDashboardSummary, alt: 'Summary tab: match/salary/education/growth stat tiles and the worker-type radar chart' },
     },
     {
       label: 'Overview',
       language: 'tsx',
       code: `import {
-  faUser,
-  faWrench,
-  faGraduationCap,
-  faUsers,
-  faMagnifyingGlass,
-  faThoughtBubble,
-  faPalette,
-  faPuzzlePiece,
-  faClock,
-  faBrain,
-  faDumbbell,
-  faShuffle,
-  faFlag,
-  faHourglass,
-  faChess,
+  faBrain, faChess, faClock, faDumbbell, faFlag, faGraduationCap, faHourglass, faMagnifyingGlass,
+  faPalette, faPuzzlePiece, faShuffle, faThoughtBubble, faUser, faUsers, faWrench
 } from '@fortawesome/pro-solid-svg-icons';
 import ListStatic from '@/Components/Elements/ListContent/ListStatic';
 import MetricCard from '@/Components/Groups/Cards/MetricCard';
@@ -495,8 +482,18 @@ export default function CareerDetailOverviewTab({ responsibilities, workEnvironm
               score: adjustScore(personalQualities.levelOfAttentionToDetail),
               total: 10,
             },
-            { icon: faThoughtBubble, label: 'Logic', score: adjustScore(personalQualities.amountOfStructure), total: 10 },
-            { icon: faPalette, label: 'Creativity', score: adjustScore(personalQualities.levelOfCreativeExpression), total: 10 },
+            {
+              icon: faThoughtBubble,
+              label: 'Logic',
+              score: adjustScore(personalQualities.amountOfStructure),
+              total: 10
+            },
+            {
+              icon: faPalette,
+              label: 'Creativity',
+              score: adjustScore(personalQualities.levelOfCreativeExpression),
+              total: 10
+            },
             {
               icon: faPuzzlePiece,
               label: 'Problem Solving',
@@ -688,7 +685,7 @@ export default function CareerDetailEducationTab({ requirementsSchool, requireme
   );
 }`,
       talkThrough:
-        "Left in deliberately as a stub rather than cut from the write-up: this tab was scoped but not yet built when the rest of the feature shipped, so it renders the raw progression data it already has access to rather than a polished visualization. It's a small, honest snapshot of a real in-progress state — the surrounding tabs are equally driven by the `career` prop, this one just hasn't grown its presentational layer yet.",
+        "Left in deliberately as a stub rather than cut from the write-up: this tab was scoped but not yet designed when I left, so it renders the raw progression data it already has access to rather than a polished visualization. It's a small, honest snapshot of a real in-progress state — the surrounding tabs are equally driven by the `career` prop, this one just hasn't grown its presentational layer yet.",
     },
   ],
 }

@@ -379,7 +379,7 @@ export default class SelectAffordabilityAssessmentComponentVM extends Views.View
     }
 }`,
       talkThrough:
-        "The view model loads the client-specific list of assessment elements/groupings/items (already shaped per that client's own configuration) alongside any previously saved amounts for the current loan application, then walks the nested structure to merge the two — matching saved amounts back onto their source item by id — so a returning client sees their own prior inputs pre-filled. On save, it flattens the same nested list back into the command payload the API expects, and resets local state once the save succeeds so the form is ready for a fresh assessment.",
+        "The frontend uses an in-house, React-based Model–view–viewmodel (MVVM) architecture approach, this standardises frontend knowledge across all of the company's projects and teams. The view model loads the client-specific list of assessment elements/groupings/items (already shaped per that client's own configuration) alongside any previously saved amounts for the current loan application, then walks the nested structure to merge the two — matching saved amounts back onto their source item by id — so a returning client sees their own prior inputs pre-filled. On save, it flattens the same nested list back into the command payload the API expects, and resets local state once the save succeeds so the form is ready for a fresh assessment.",
     },
     {
       label: 'Frontend UI — rendering the dynamic form',

@@ -120,7 +120,7 @@ export default function ReportLayout({
   );
 }`,
       talkThrough:
-        "This is the piece that makes the whole lifecycle work across more than just Worker Type: it knows nothing about what report it's rendering, only a `webComponentName` string and a `menuOptions` map of section keys to labels — both handed down by the caller. A shared store tracks the current section and whether the mobile nav drawer is open, and that same state drives two visually different outputs from one `ReportNavigation` component: a top drawer on mobile, a sidebar on desktop, and (when the view option is 'slides') a slide navigation bar rendered alongside the content instead of a normal scroll. Any new report type on the platform reuses this exact layout by passing its own component name and sections — nothing here changes.",
+        "This is the piece that makes the whole lifecycle work across more than just the Worker Type Report: it knows nothing about what report it's rendering, only a `webComponentName` string and a `menuOptions` map of section keys to labels — both handed down by the caller. A shared store tracks the current section and whether the mobile nav drawer is open, and that same state drives two visually different outputs from one `ReportNavigation` component: a top drawer on mobile, a sidebar on desktop, and (when the view option is 'slides') a slide navigation bar rendered alongside the content instead of a normal scroll. Any new report type on the platform reuses this exact layout by passing its own component name and sections.",
     },
     {
       label: 'Report page — composing into the shared layout',
@@ -159,7 +159,7 @@ export default function ReportLayout({
   );
 }`,
       talkThrough:
-        "This page is the actual Worker Type-specific piece — it declares the 5 sections the report has (summary, introduction, archetype, primary/secondary worker type) and a toolbar with a view-mode switcher and a link into the lesson, then hands both to the shared `ReportLayout` along with which web component should render the content for the currently selected section. Everything about how those sections navigate, or which view mode is active, is left entirely to the layout — this page just supplies the report's own shape.",
+        "This page is the actual Worker Type-specific piece — it declares the 5 sections the report has (summary, introduction, archetype, primary worker type, and secondary worker type) and a toolbar with a view-mode switcher and a link into the lesson, then hands both to the shared `ReportLayout` along with which web component should render the content for the currently selected section. Everything about how those sections navigate, or which view mode is active, is left entirely to the layout — this page just supplies the report's own shape.",
     },
     {
       label: 'Lesson — a standalone walkthrough of the same content',
