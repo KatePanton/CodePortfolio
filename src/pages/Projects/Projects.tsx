@@ -36,6 +36,11 @@ export default function Projects() {
           <div key={project.slug} className={styles.briefItem}>
             <div className={styles.briefHeader}>
               <span className={styles.briefTitle}>{project.name}</span>
+              {project.detail && (
+                <Link to={`/projects/${project.slug}`} className={styles.briefLink}>
+                  View details →
+                </Link>
+              )}
               {project.codeLink && (
                 <a href={project.codeLink} target="_blank" rel="noreferrer" className={styles.briefLink}>
                   View code ↗

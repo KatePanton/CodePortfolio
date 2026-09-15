@@ -1,0 +1,41 @@
+.backLink {
+  display: inline-block;
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.backLink:hover {
+  color: var(--color-text-strong);
+}
+
+.heading {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-strong);
+}
+
+.blurb {
+  margin-top: 0.5rem;
+  color: var(--color-text-muted);
+}
+
+.videoWrap {
+  margin-top: 1.5rem;
+}
+
+.video {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.videoCaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
