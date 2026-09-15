@@ -19,7 +19,7 @@ once all 7 are filled in.
 - [ ] `css-colour-variant-theming`
 - [ ] `button-pill-styling`
 - [ ] `cv-builder`
-- [ ] `toast-notifications`
+- [x] `toast-notifications`
 - [ ] `storybook-component-library`
 
 Hard constraint carried over from task 0014: no real employer or product
@@ -29,7 +29,7 @@ name anywhere — generic descriptors only.
 none
 
 ## Patterns
-none
+[slug-detail-page](../../.claude/patterns/slug-detail-page.md)
 
 ## Screenshots
 See screenshots/ in this folder.
@@ -37,4 +37,12 @@ See screenshots/ in this folder.
 ## Outcome
 
 ## Changes forced by later work
-none
+Scope expanded beyond the original blurb-only goal: some brief entries
+need more than a name/blurb — code snippets and/or screenshots (one or
+two will use a video instead of screenshots). Added a generic, reusable
+detail page (`src/pages/Projects/BriefDetail/BriefDetail.tsx`, routed at
+`/projects/:slug`) that a brief project's row links to only if it has
+`detail` data (`BriefProject.detail` in
+`src/data/projects/types.ts`) — not every brief project gets one. No
+brief entries have real detail data populated yet; this only adds the
+infrastructure.

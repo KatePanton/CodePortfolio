@@ -16,6 +16,21 @@ export interface ProjectScreenshot {
   caption?: string
 }
 
+export interface ProjectVideo {
+  src: string
+  alt: string
+  caption?: string
+}
+
+export type ProjectMedia =
+  | { kind: 'screenshots'; screenshots: ProjectScreenshot[] }
+  | { kind: 'video'; video: ProjectVideo }
+
+export interface BriefProjectDetail {
+  media?: ProjectMedia
+  snippets?: CodeSnippet[]
+}
+
 interface BaseProject {
   slug: string
   name: string
@@ -25,7 +40,7 @@ interface BaseProject {
 export interface BriefProject extends BaseProject {
   tier: 'brief'
   blurb: string
-  codeLink?: string
+  detail?: BriefProjectDetail
 }
 
 export interface HighlightedProject extends BaseProject {
