@@ -28,3 +28,4 @@ already `in-progress`.
 | 0020 | Brief-tier project write-ups | project-writeup | todo | [tasks/0020_brief-tier-project-writeups](0020_brief-tier-project-writeups/task.md) |
 | 0021 | Component library viewer | site-build | done | [tasks/0021_component-library-viewer](0021_component-library-viewer/task.md) |
 | 0022 | Worker Type components write-up | component-writeup | todo | [tasks/0022_worker-type-components-writeup](0022_worker-type-components-writeup/task.md) |
+| 0023 | Site content review and edits | content-review | todo | [tasks/0023_site-content-review](0023_site-content-review/task.md) |
