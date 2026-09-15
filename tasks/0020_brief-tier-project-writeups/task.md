@@ -2,7 +2,7 @@
 id: 0020
 title: Brief-tier project write-ups
 type: project-writeup
-status: todo
+status: in-progress
 ---
 
 ## Summary
@@ -16,8 +16,8 @@ once all 7 are filled in.
 
 - [ ] `portfolio-component-display`
 - [ ] `external-skills-api-integration`
-- [ ] `css-colour-variant-theming`
-- [ ] `button-pill-styling`
+- [x] `css-colour-variant-theming`
+- [x] `button-pill-styling`
 - [ ] `cv-builder`
 - [x] `toast-notifications`
 - [ ] `storybook-component-library`

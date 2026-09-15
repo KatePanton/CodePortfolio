@@ -25,7 +25,7 @@ already `in-progress`.
 | 0017 | Career Website Section project write-up | project-writeup | done | [tasks/0017_career-website-section-writeup](0017_career-website-section-writeup/task.md) |
 | 0018 | Normalise Raw Import Data Stored Procedure project write-up | project-writeup | done | [tasks/0018_normalise-import-data-writeup](0018_normalise-import-data-writeup/task.md) |
 | 0019 | Affordability Assessment project write-up | project-writeup | done | [tasks/0019_affordability-assessment-writeup](0019_affordability-assessment-writeup/task.md) |
-| 0020 | Brief-tier project write-ups | project-writeup | todo | [tasks/0020_brief-tier-project-writeups](0020_brief-tier-project-writeups/task.md) |
+| 0020 | Brief-tier project write-ups | project-writeup | in-progress | [tasks/0020_brief-tier-project-writeups](0020_brief-tier-project-writeups/task.md) |
 | 0021 | Component library viewer | site-build | done | [tasks/0021_component-library-viewer](0021_component-library-viewer/task.md) |
 | 0022 | Worker Type components write-up | component-writeup | todo | [tasks/0022_worker-type-components-writeup](0022_worker-type-components-writeup/task.md) |
 | 0023 | Site content review and edits | content-review | todo | [tasks/0023_site-content-review](0023_site-content-review/task.md) |

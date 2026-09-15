@@ -1,5 +1,7 @@
 import type { BriefProject } from './types'
 import toastNotificationsDetail from './brief-detail/toast-notifications'
+import cssColourVariantThemingDetail from './brief-detail/css-colour-variant-theming'
+import buttonPillStylingDetail from './brief-detail/button-pill-styling'
 
 export const briefProjects: BriefProject[] = [
   {
@@ -18,15 +20,20 @@ export const briefProjects: BriefProject[] = [
   {
     slug: 'css-colour-variant-theming',
     tier: 'brief',
-    name: 'TODO: generic project name (no real employer/product names)',
-    blurb: 'TODO: 1-2 sentence blurb — a consistent system for tracking, using, and updating a large light/dark colour palette.',
+    name: 'Colour-Variant Token System',
+    blurb:
+      'A Tailwind colour-token system that maps a fixed set of semantic roles onto each named colour, with a single union type as the source of truth — so adding or restyling a colour is a one-place change instead of a hunt through every component.',
+    techStack: ['Tailwind CSS', 'TypeScript'],
+    detail: cssColourVariantThemingDetail,
   },
   {
     slug: 'button-pill-styling',
     tier: 'brief',
-    name: 'TODO: generic project name (no real employer/product names)',
+    name: 'Unified Button & Pill Components',
     blurb:
-      'TODO: 1-2 sentence blurb — a dynamic, generic button/pill component replacing several visually different but functionally identical variants.',
+      'A single, dynamic Button and Pill component pair that replaced several visually different but functionally identical variants, driven entirely by variant/colour props against the colour-token system above.',
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'tailwind-merge', 'Font Awesome'],
+    detail: buttonPillStylingDetail,
   },
   {
     slug: 'cv-builder',
