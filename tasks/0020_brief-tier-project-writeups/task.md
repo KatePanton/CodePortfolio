@@ -19,7 +19,7 @@ once all 7 are filled in.
 - [ ] `css-colour-variant-theming`
 - [ ] `button-pill-styling`
 - [ ] `cv-builder`
-- [ ] `toast-notifications`
+- [x] `toast-notifications`
 - [ ] `storybook-component-library`
 
 Hard constraint carried over from task 0014: no real employer or product

@@ -36,8 +36,10 @@ export const briefProjects: BriefProject[] = [
   {
     slug: 'toast-notifications',
     tier: 'brief',
-    name: 'TODO: generic project name (no real employer/product names)',
-    blurb: 'TODO: 1-2 sentence blurb — implementation and theming of toast notifications.',
+    name: 'Themed Toast Notification System',
+    blurb:
+      'A themed toast-notification system built on react-toastify, with variant-based icon styling for different severities and layout components for plain, single-action, and dual-action toasts.',
+    techStack: ['React', 'TypeScript', 'react-toastify', 'Font Awesome', 'Tailwind CSS'],
   },
   {
     slug: 'storybook-component-library',
