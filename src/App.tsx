@@ -10,6 +10,7 @@ const NormaliseImportDataDetail = lazy(() => import('./pages/Projects/normalise-
 const AffordabilityAssessmentDetail = lazy(() => import('./pages/Projects/affordability-assessment/ProjectDetail'))
 const CareerWebsiteSectionDetail = lazy(() => import('./pages/Projects/career-website-section/ProjectDetail'))
 const WorkerTypeLifecycleDetail = lazy(() => import('./pages/Projects/worker-type-lifecycle/ProjectDetail'))
+const BriefDetail = lazy(() => import('./pages/Projects/BriefDetail/BriefDetail'))
 const ComponentDetail = lazy(() => import('./pages/Component/ComponentDetail'))
 const Process = lazy(() => import('./pages/Process/Process'))
 const Skills = lazy(() => import('./pages/Skills/Skills'))
@@ -49,6 +50,14 @@ function App() {
           element={
             <Suspense fallback={null}>
               <WorkerTypeLifecycleDetail />
+            </Suspense>
+          }
+        />
+        <Route
+          path="projects/:slug"
+          element={
+            <Suspense fallback={null}>
+              <BriefDetail />
             </Suspense>
           }
         />
