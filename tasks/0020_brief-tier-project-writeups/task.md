@@ -18,7 +18,7 @@ once all 7 are filled in.
 - [ ] `external-skills-api-integration`
 - [x] `css-colour-variant-theming`
 - [x] `button-pill-styling`
-- [ ] `cv-builder`
+- [x] `cv-builder`
 - [x] `toast-notifications`
 - [ ] `storybook-component-library`
 

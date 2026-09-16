@@ -2,6 +2,7 @@ import type { BriefProject } from './types'
 import toastNotificationsDetail from './brief-detail/toast-notifications'
 import cssColourVariantThemingDetail from './brief-detail/css-colour-variant-theming'
 import buttonPillStylingDetail from './brief-detail/button-pill-styling'
+import cvBuilderDetail from './brief-detail/cv-builder'
 
 export const briefProjects: BriefProject[] = [
   {
@@ -38,8 +39,11 @@ export const briefProjects: BriefProject[] = [
   {
     slug: 'cv-builder',
     tier: 'brief',
-    name: 'TODO: generic project name (no real employer/product names)',
-    blurb: 'TODO: 1-2 sentence blurb — a two-person build of a CV builder; built three sections plus sortable-entry functionality.',
+    name: 'CV Builder',
+    blurb:
+      'A two-person build of a CV builder with live preview. Built the Interests, References, and Skill sections, plus the shared drag-to-reorder list component all six list-backed sections are built on.',
+    techStack: ['React', 'TypeScript', 'Inertia.js', '@dnd-kit', 'Tailwind CSS'],
+    detail: cvBuilderDetail,
   },
   {
     slug: 'toast-notifications',
